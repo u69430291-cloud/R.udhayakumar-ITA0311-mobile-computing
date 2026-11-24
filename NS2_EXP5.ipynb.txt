@@ -1,0 +1,297 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_5nAOVLcJYM0",
+        "outputId": "d5f3858d-269e-4286-94f3-7bf3c89371c8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "W: Skipping acquire of configured file 'main/source/Sources' as repository 'https://r2u.stat.illinois.edu/ubuntu noble InRelease' does not seem to provide it (sources.list entry misspelt?)\n",
+            "Reading package lists... Done\n",
+            "Building dependency tree... Done\n",
+            "Reading state information... Done\n",
+            "The following additional packages will be installed:\n",
+            "  libotcl1 libpcap0.8t64 libtclcl1\n",
+            "Suggested packages:\n",
+            "  gnuplot\n",
+            "The following NEW packages will be installed:\n",
+            "  libotcl1 libpcap0.8t64 libtclcl1 ns2\n",
+            "0 upgraded, 4 newly installed, 0 to remove and 68 not upgraded.\n",
+            "Need to get 2,810 kB of archives.\n",
+            "After this operation, 15.7 MB of additional disk space will be used.\n",
+            "Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpcap0.8t64 amd64 1.10.4-4.1ubuntu3.1 [151 kB]\n",
+            "Get:2 http://archive.ubuntu.com/ubuntu noble/universe amd64 libotcl1 amd64 1.14+dfsg-8 [24.2 kB]\n",
+            "Get:3 http://archive.ubuntu.com/ubuntu noble/universe amd64 libtclcl1 amd64 1.20-10 [65.2 kB]\n",
+            "Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 ns2 amd64 2.35+dfsg-5build2 [2,569 kB]\n",
+            "Fetched 2,810 kB in 0s (16.5 MB/s)\n",
+            "Selecting previously unselected package libpcap0.8t64:amd64.\n",
+            "(Reading database ... 122813 files and directories currently installed.)\n",
+            "Preparing to unpack .../libpcap0.8t64_1.10.4-4.1ubuntu3.1_amd64.deb ...\n",
+            "Unpacking libpcap0.8t64:amd64 (1.10.4-4.1ubuntu3.1) ...\n",
+            "Selecting previously unselected package libotcl1:amd64.\n",
+            "Preparing to unpack .../libotcl1_1.14+dfsg-8_amd64.deb ...\n",
+            "Unpacking libotcl1:amd64 (1.14+dfsg-8) ...\n",
+            "Selecting previously unselected package libtclcl1:amd64.\n",
+            "Preparing to unpack .../libtclcl1_1.20-10_amd64.deb ...\n",
+            "Unpacking libtclcl1:amd64 (1.20-10) ...\n",
+            "Selecting previously unselected package ns2.\n",
+            "Preparing to unpack .../ns2_2.35+dfsg-5build2_amd64.deb ...\n",
+            "Unpacking ns2 (2.35+dfsg-5build2) ...\n",
+            "Setting up libotcl1:amd64 (1.14+dfsg-8) ...\n",
+            "Setting up libtclcl1:amd64 (1.20-10) ...\n",
+            "Setting up libpcap0.8t64:amd64 (1.10.4-4.1ubuntu3.1) ...\n",
+            "Setting up ns2 (2.35+dfsg-5build2) ...\n",
+            "Processing triggers for man-db (2.12.0-4build2) ...\n",
+            "Processing triggers for libc-bin (2.39-0ubuntu8.9) ...\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libumf.so.1 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link\n",
+            "\n",
+            "/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero_v2.so.0 is not a symbolic link\n",
+            "\n"
+          ]
+        }
+      ],
+      "source": [
+        "!apt-get update -qq\n",
+        "!apt-get install -y ns2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "%%writefile exp5.tcl\n",
+        "\n",
+        "set ns [new Simulator]\n",
+        "\n",
+        "# Enable Distance Vector routing\n",
+        "$ns rtproto DV\n",
+        "\n",
+        "set tr [open out.tr w]\n",
+        "set nf [open out.nam w]\n",
+        "\n",
+        "$ns trace-all $tr\n",
+        "$ns namtrace-all $nf\n",
+        "\n",
+        "# Create four nodes\n",
+        "for {set i 0} {$i < 4} {incr i} {\n",
+        "    set n($i) [$ns node]\n",
+        "}\n",
+        "\n",
+        "# Create ring topology\n",
+        "for {set i 0} {$i < 4} {incr i} {\n",
+        "    $ns duplex-link $n($i) $n([expr ($i+1)%4]) 1Mb 10ms DropTail\n",
+        "}\n",
+        "\n",
+        "# UDP connection from node 0 to node 2\n",
+        "set udp [new Agent/UDP]\n",
+        "set null [new Agent/Null]\n",
+        "\n",
+        "$ns attach-agent $n(0) $udp\n",
+        "$ns attach-agent $n(2) $null\n",
+        "$ns connect $udp $null\n",
+        "\n",
+        "# CBR traffic\n",
+        "set cbr [new Application/Traffic/CBR]\n",
+        "$cbr attach-agent $udp\n",
+        "$cbr set packetSize_ 512\n",
+        "$cbr set interval_ 0.05\n",
+        "\n",
+        "# Start traffic\n",
+        "$ns at 0.5 \"$cbr start\"\n",
+        "\n",
+        "# Link failure and recovery\n",
+        "$ns rtmodel-at 2.0 down $n(1) $n(2)\n",
+        "$ns rtmodel-at 3.0 up $n(1) $n(2)\n",
+        "\n",
+        "# Stop traffic and finish\n",
+        "$ns at 4.5 \"$cbr stop\"\n",
+        "$ns at 5.0 \"finish\"\n",
+        "\n",
+        "proc finish {} {\n",
+        "    global ns tr nf\n",
+        "    $ns flush-trace\n",
+        "    close $tr\n",
+        "    close $nf\n",
+        "    exit 0\n",
+        "}\n",
+        "\n",
+        "$ns run"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c06jik4CJes0",
+        "outputId": "ee4b8a20-2bd6-4984-cf5e-7eea5338421c"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Writing exp5.tcl\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!ns exp5.tcl"
+      ],
+      "metadata": {
+        "id": "F-KsicrDJg4m"
+      },
+      "execution_count": 3,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!ls"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Pr_MOq52JhA8",
+        "outputId": "0c5c8ff8-9917-4937-a92c-47757af7bf90"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "exp5.tcl  out.nam  out.tr  sample_data\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!head out.tr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R67VF6x2Jme7",
+        "outputId": "aa9daf32-bd56-4403-f85c-112fb84cb0ee"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "+ 0.00017 0 1 rtProtoDV 4 ------- 0 0.2 1.1 -1 0\n",
+            "- 0.00017 0 1 rtProtoDV 4 ------- 0 0.2 1.1 -1 0\n",
+            "+ 0.00017 0 3 rtProtoDV 4 ------- 0 0.2 3.1 -1 1\n",
+            "- 0.00017 0 3 rtProtoDV 4 ------- 0 0.2 3.1 -1 1\n",
+            "+ 0.007102 2 1 rtProtoDV 4 ------- 0 2.2 1.1 -1 2\n",
+            "- 0.007102 2 1 rtProtoDV 4 ------- 0 2.2 1.1 -1 2\n",
+            "+ 0.007102 2 3 rtProtoDV 4 ------- 0 2.2 3.1 -1 3\n",
+            "- 0.007102 2 3 rtProtoDV 4 ------- 0 2.2 3.1 -1 3\n",
+            "r 0.010202 0 1 rtProtoDV 4 ------- 0 0.2 1.1 -1 0\n",
+            "+ 0.010202 1 0 rtProtoDV 4 ------- 0 1.1 0.2 -1 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!awk '$1==\"d\" {n++} END {print \"Dropped packets:\",n+0}' out.tr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ckuv2zWvJmlL",
+        "outputId": "c079f008-906e-4e7b-8df6-9929d6f2eab0"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dropped packets: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!awk '$1==\"r\" {n++} END {print \"Received packets:\",n+0}' out.tr"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AwUftTVtJmtz",
+        "outputId": "44f8aa1e-347e-44c1-e8dc-7612a5fdb12c"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Received packets: 200\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
